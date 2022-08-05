@@ -1,0 +1,38 @@
+{
+  "name": "type-graphql-utils",
+  "version": "1.0.0",
+  "description": "utilities to transform type-graphql types",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "prepare": "install-peers && tsc",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:ChrisLahaye/type-graphql-utils"
+  },
+  "keywords": [
+    "type-graphql"
+  ],
+  "author": "Chris Lahaye <mail@chrislahaye.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChrisLahaye/type-graphql-utils/issues"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "install-peers-cli": "^2.2.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "graphql": "^15",
+    "type-graphql": "^1"
+  }
+}
