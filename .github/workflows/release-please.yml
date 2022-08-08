@@ -1,0 +1,37 @@
+name: Release Please
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  releasePlease:
+    runs-on: ubuntu-latest
+    steps:
+      - id: release
+        name: Release Please
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: release-please-action
+
+      - if: ${{ steps.release.outputs.release_created }}
+        name: Checkout
+        uses: actions/checkout@v3
+
+      - if: ${{ steps.release.outputs.release_created }}
+        name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '*'
+          registry-url: 'https://registry.npmjs.org'
+
+      - if: ${{ steps.release.outputs.release_created }}
+        name: Install
+        run: yarn install --frozen-lockfile
+
+      - if: ${{ steps.release.outputs.release_created }}
+        name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn publish --new-version ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
