@@ -34,6 +34,8 @@ export function buildType(
   metadata.fields.forEach((f) => {
     if (f.target !== BaseClass && !f.target.isPrototypeOf(BaseClass)) return;
 
+    f.getType(); // detect array type options, issue #3
+
     const field = buildFn(f);
 
     if (field instanceof Array) {
