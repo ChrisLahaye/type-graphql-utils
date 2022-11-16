@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/ChrisLahaye/type-graphql-utils/compare/v1.1.0...v2.0.0) (2022-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* detect array type options
+
+### Bug Fixes
+
+* detect array type options ([6f57a22](https://github.com/ChrisLahaye/type-graphql-utils/commit/6f57a22fe13fbe45dbc7bfbea9868b12c05defc2)), closes [#3](https://github.com/ChrisLahaye/type-graphql-utils/issues/3)
+
 ## [1.1.0](https://github.com/ChrisLahaye/type-graphql-utils/compare/v1.0.0...v1.1.0) (2022-08-09)
 
 
