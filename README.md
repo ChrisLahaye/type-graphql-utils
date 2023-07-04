@@ -83,18 +83,22 @@ input UserInput3 {
 
 **`names`**: The fields to transform. A potentially optional object containing the names of the fields as key, e.g. `{ id: 1, name: 1 }`. The TypeScript type enforces all values to be *1*, but the value isn't actually used. We just need the names as object to determine if a name is included in constant time.
 
-### `Pick(BaseClass, names)`
+**`options`**: The transformation options. An optional object containing any of the following properties:
+
+- `directives`: A boolean that indicates whether to apply directives. By default, false.
+
+### `Pick(BaseClass, names, [options])`
 
 Constructs a type by picking the keys of `names` from `BaseClass`.
 
-### `Omit(BaseClass, names)`
+### `Omit(BaseClass, names, [options])`
 
 Constructs a type by picking all fields from `BaseClass` and then removing the keys of `names`.
 
-### `Partial(BaseClass, [names])`
+### `Partial(BaseClass, [names], [options])`
 
 Constructs a type by picking all fields from `BaseClass` and then setting the keys of `names` to optional. The opposite of Required. By default, `names` contains all names.
 
-### `Required(BaseClass, [names])`
+### `Required(BaseClass, [names], [options])`
 
 Constructs a type by picking all fields from `BaseClass` and then setting the keys of `names` to required. The opposite of Partial. By default, `names` contains all names.
