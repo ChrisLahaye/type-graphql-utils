@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/ChrisLahaye/type-graphql-utils/compare/v2.0.0...v2.1.0) (2023-07-05)
+
+
+### Features
+
+* add option to apply directives ([651a32e](https://github.com/ChrisLahaye/type-graphql-utils/commit/651a32ede98dc3a344aff09507ca09a3530782ce))
+
 ## [2.0.0](https://github.com/ChrisLahaye/type-graphql-utils/compare/v1.1.0...v2.0.0) (2022-11-16)
 
 
